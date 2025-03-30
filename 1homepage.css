@@ -1,0 +1,31 @@
+body{
+  background-color:khaki
+}
+.topnav{
+    overflow: hidden;
+    background-color: coral;
+    padding: 7px;
+    text-align: center;
+}
+.topnav a{
+    color: #cf0202;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+.topnav a:hover{
+    background-color: black;
+    color: wheat;
+}
+.topnav a.active{
+    background-color: blueviolet;
+    color: yellowgreen
+}
+.floatl{
+    float: left;
+}
+.floatr{
+    float: right;
+    padding-right: 50%;
+}
