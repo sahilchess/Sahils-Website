@@ -48,3 +48,8 @@ body{
     
   padding-right: 50%;
 }
+.fascinate-regular {
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
