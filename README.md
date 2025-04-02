@@ -27,4 +27,5 @@ This is a personal website created by Me. It contains various pages and programs
   - Lists
   - Tables
 
-
+PS
+I used pull requests because that was a bit comlicated and didn't want to screw somethingup if it didnt work.
