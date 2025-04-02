@@ -53,3 +53,7 @@ body{
   font-weight: 400;
   font-style: normal;
 }
+h1 {
+    font-family: 'Fascinate', cursive;
+    text-align: center;
+}
