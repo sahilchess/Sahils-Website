@@ -10,7 +10,13 @@ h1{
   
     color: #000000;
   
-    text-decoration: underline
+    text-decoration: underline;
+  
+    font-family: 'Fascinate', cursive;
+}
+h2{
+  
+    font-family: 'Fascinate', cursive;
 }
 p{
   
