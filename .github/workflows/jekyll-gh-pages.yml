@@ -42,7 +42,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{  https://sahilchess.github.io/Sahils-Website/ }}
+      url: ${{https://sahilchess.github.io/Sahils-Website}}
     runs-on: ubuntu-latest
     needs: build
     steps:
