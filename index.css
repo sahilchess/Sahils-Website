@@ -27,7 +27,7 @@ body {
 }
 .floatr {
   float: right;
-  padding-right: 50%;
+  padding-right: 100%;
 }
 .fascinate-regular {
   font-family: "Fascinate", system-ui;
