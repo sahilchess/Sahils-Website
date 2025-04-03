@@ -65,6 +65,11 @@ h2 {
   margin-right: 225px;
 }
 footer {
-    font-weight: 700;
-    margin: 15px;
+    background-color: #FF0000;
+    color: black;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
