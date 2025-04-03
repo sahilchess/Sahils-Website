@@ -82,3 +82,8 @@ img{
   
     color: #9acd32
 }
+footer {
+    font-family: "Space Grotesk", serif;
+    font-weight: 700;
+    margin: 15px;
+}
