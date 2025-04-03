@@ -32,10 +32,10 @@ h2 {
   font-family: 'Fascinate', cursive;
 }
 footer {
-    background-color: #FF6347;
+    background-color: #b22222;
     color: black;
     text-align: center;
-    padding: 0.5em 0;
+    padding: 0.25em 0;
     position: fixed;
     width: 100%;
     bottom: 0;
