@@ -1,82 +1,82 @@
-body{ 
-  background-color:khaki
+body {
+  background-color: khaki;
 }
-.topnav{
+
+.topnav {
   overflow: hidden;
   background-color: coral;
   padding: 7px;
-    
   text-align: center;
 }
-.topnav a{
-    
+
+.topnav a {
   color: #cf0202;
-    
   text-align: center;
-    
   padding: 20px;
-    
   text-decoration: none;
-    
   font-size: 20px;
-  }
-.topnav a:hover{
-    
+}
+
+.topnav a:hover {
   background-color: black;
-    
   color: wheat;
 }
-.topnav a.active{
-    
+
+.topnav a.active {
   background-color: blueviolet;
-    
-  color: yellowgreen
+  color: yellowgreen;
 }
-.floatl{
-    
+
+.floatl {
   float: left;
 }
-.floatr{
-    
+
+.floatr {
   float: right;
-    
   padding-right: 50%;
 }
+
 .fascinate-regular {
   font-family: "Fascinate", system-ui;
   font-weight: 400;
   font-style: normal;
 }
+
 h1 {
-    font-family: 'Fascinate', cursive;
-    text-align: center;
+  font-family: 'Fascinate', cursive;
+  text-align: center;
 }
+
 h2 {
-    font-family: 'Fascinate', cursive;
+  font-family: 'Fascinate', cursive;
 }
+
 .spacer {
   margin-left: 225px;
   margin-right: 225px;
 }
+
 footer {
-    background-color: #bdb76b;
-    color: black;
-    text-align: center;
-    padding: 0.25em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  background-color: #bdb76b;
+  color: black;
+  text-align: center;
+  padding: 0.25em 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
+
 h1, h2 {
-    font-family: 'Fascinate', cursive;
-    text-align: center;
+  font-family: 'Fascinate', cursive;
+  text-align: center;
 }
+
 footer {
-    background-color: #bdb76b;
-    color: black;
-    text-align: center;
-    padding: 0.25em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  background-color: #bdb76b;
+  color: black;
+  text-align: center;
+  padding: 0.25em 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
