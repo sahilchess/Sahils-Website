@@ -73,3 +73,16 @@ footer {
     width: 100%;
     bottom: 0;
 }
+h1, h2 {
+    font-family: 'Fascinate', cursive;
+    text-align: center;
+}
+footer {
+    background-color: #1e7c00;
+    color: black;
+    text-align: center;
+    padding: 0.25em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
