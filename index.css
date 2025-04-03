@@ -64,3 +64,8 @@ h2 {
   margin-left: 225px;
   margin-right: 225px;
 }
+footer {
+    font-family: "Space Grotesk", serif;
+    font-weight: 700;
+    margin: 15px;
+}
