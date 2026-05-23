@@ -5,8 +5,8 @@ This is a personal website created by Me. It contains various pages and programs
 ## Pages
 
 - Home
-- About
-- Contact Us
+- About Me
+- More About Me
 - Custom 404 Page
 
 ## Programs
