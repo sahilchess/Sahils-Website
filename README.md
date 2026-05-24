@@ -1,31 +1,15 @@
 # Sahil's Website
 
-This is a personal website created by Me. It contains various pages and programs related to my interests and hobbies.
+This repository now uses a React + Vite rebuild of the original site with separate pages for Home, About, Projects, Browser Demos, and Contact.
 
-## Pages
+## Run locally
 
-- Home
-- About Me
-- More About Me
-- Custom 404 Page
+1. `npm install`
+2. `npm run dev`
 
-## Programs
+## Build
 
-- Python Programs
-  - Memerizor
-  - Image Editor
-  - Pong
-  - RAINBOW
-  - Snake Game 1
-  - Snake Game 2
+- `npm run build`
+- `npm run preview`
 
-- HTML Programs
-  - Intro
-  - HW 1
-  - HW 2
-  - Form
-  - Lists
-  - Tables
-
-PS
-I used pull requests because that was a bit comlicated and didn't want to screw somethingup if it didnt work.
+The old static HTML and CSS pages were replaced by the React app in the root of the project. The source is now split across small page and component files under `src/`.
