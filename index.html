@@ -1,15 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=/static%20website/index.html">
-    <title>Sahil Dasari | Technical Portfolio</title>
-  </head>
-  <body>
-    <p>Redirecting to the site...</p>
-    <script>
-      window.location.replace('/static%20website/index.html');
-    </script>
-  </body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <title>Sahil Dasari | Technical Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="hero">
+            <p class="eyebrow">Robotics. Public Speaking. Problem Solving.</p>
+            <h1>Sahil Dasari</h1>
+            <p class="hero-copy">I am a technical student who enjoys designing, programming, presenting, and building ambitious projects that turn difficult ideas into real results.</p>
+        </header>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="browser-projects.html">Python in Browser</a>
+        </div>
+        <section class="feature-grid">
+            <article class="feature-card spotlight">
+                <h2>Technical Profile</h2>
+                <p>I love robotics, and my VEX IQ team has been very successful. In my second year, my team went to the VEX IQ Robotics World Championship. I enjoyed meeting technical people from around the world and winning the Innovative Award at the World Championship. I plan to compete in FRC to deepen my technical abilities through design and programming. I also compete in FBLA Speaking Events and in the Optimist Oratorical, where I have earned Top 3 awards at the state and nationwide level. I am part of Hack Club, a technical organization for teens and hackers, and I have built many projects that I hope to use in the future when building startups. I enjoy technical work because it gives me a chance to solve complex problems, improve systems, and bring ideas to life.</p>
+            </article>
+            <article class="feature-card">
+                <h2>Robotics Focus</h2>
+                <p>Competition taught me design thinking, teamwork, and the discipline to iterate until a solution works under pressure.</p>
+                <ul>
+                    <li>VEX IQ World Championship</li>
+                    <li>Innovative Award winner</li>
+                    <li>Preparing for FRC design and programming</li>
+                </ul>
+            </article>
+            <article class="feature-card">
+                <h2>Public Speaking Focus</h2>
+                <p>Speaking events sharpen how I explain ideas, persuade audiences, and stay calm while presenting technical thinking.</p>
+                <ul>
+                    <li>FBLA Speaking Events</li>
+                    <li>Optimist Oratorical</li>
+                    <li>Top 3 state and nationwide awards</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="goal-section">
+            <article class="feature-card">
+                <h2>Goals</h2>
+                <p>I want to keep growing as a technical leader by competing in FRC, strengthening my programming and engineering skills, building startup ideas, and learning from ambitious people who work on hard problems.</p>
+                <ul>
+                    <li>Build a startup around a real technical problem</li>
+                    <li>Earn admission to an Ivy League university</li>
+                    <li>Keep developing advanced robotics and software skills</li>
+                </ul>
+            </article>
+            <article class="feature-card">
+                <h2>Olympiad Mindset</h2>
+                <p>I like olympiads because they reward deep thinking, precision, and consistent effort. They match the same kind of focus I enjoy in robotics, coding, and speaking events.</p>
+            </article>
+        </section>
+
+        <section class="project-section">
+            <h2>Projects and Practice</h2>
+            <div class="project-columns">
+                <div>
+                    <h3>Python Programs</h3>
+                    <ol>
+                        <li><a href="browser-projects.html#memerizor">Memerizor</a></li>
+                        <li><a href="browser-projects.html#image-editor">Image Editor</a></li>
+                        <li><a href="browser-projects.html#pong">Pong</a></li>
+                        <li><a href="browser-projects.html#rainbow">RAINBOW</a></li>
+                        <li><a href="browser-projects.html#snake">Snake Game</a></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <div class="quick-links">
+                        <a class="quick-link-card" href="https://github.com/sahilchess" target="_blank" rel="noreferrer">
+                            <img src="https://raw.githubusercontent.com/dheereshag/coloured-icons/master/public/logos/technology/github/github-light.svg" alt="GitHub" class="quick-link-icon">
+                            <span>GitHub</span>
+                        </a>
+                        <a class="quick-link-card" href="mailto:sahilchess09@gmail.com?subject=Website%20Email">
+                            <img src="https://raw.githubusercontent.com/dheereshag/coloured-icons/master/public/logos/technology/gmail/gmail.svg" alt="Email" class="quick-link-icon">
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Sahil Dasari | Robotics, speaking, and technical leadership</p>
+        </footer>
+    </body>
 </html>
