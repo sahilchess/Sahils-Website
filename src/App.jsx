@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import SiteNav from './components/SiteNav'
 import {
   AboutPage,
- Browser ProjectsPage,
+  BrowserProjectsPage,
   ContactPage,
   HomePage,
   NotFoundPage,
