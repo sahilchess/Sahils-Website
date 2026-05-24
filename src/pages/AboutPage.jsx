@@ -1,5 +1,5 @@
 import PageHeader from '../components/PageHeader'
-import { aboutLanguages } from '../data/siteContent'
+import { aboutLanguageBadges } from '../data/siteContent'
 
 export default function AboutPage() {
   return (
@@ -9,7 +9,7 @@ export default function AboutPage() {
         description="This page explains the experiences, interests, and goals that shape how I approach robotics, speaking, and long-term technical growth."
         eyebrow="About Me"
         slim
-        title="A student built around technical growth"
+        title="Big Ideas in a Big World"
       />
 
       <section className="section-block">
@@ -52,8 +52,11 @@ export default function AboutPage() {
 
             <h4>Programming Languages Known</h4>
             <ul className="tag-list">
-              {aboutLanguages.map((language) => (
-                <li key={language}>{language}</li>
+              {aboutLanguageBadges.map((language) => (
+                <li className="language-badge" key={language.label}>
+                  <span className="language-signature">{language.signature}</span>
+                  <span className="language-name">{language.label}</span>
+                </li>
               ))}
             </ul>
 

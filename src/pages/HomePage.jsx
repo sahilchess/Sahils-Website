@@ -23,7 +23,7 @@ export default function HomePage() {
       <section className="section-block">
         <div className="section-heading">
           <p className="eyebrow">Choose a page</p>
-          <h2>Everything is split into its own page</h2>
+          <h2>Organized Cleanly and Effortlessly</h2>
         </div>
 
         <div className="panel-grid home-card-grid">

@@ -46,7 +46,7 @@ export default function App() {
       <SiteNav currentPage={currentPage} />
       <Page />
       <footer className="site-footer">
-        <p>Sahil Dasari | Robotics, speaking, and technical leadership</p>
+        <p className="site-footer-quote">Aut viam inveniam aut faciam</p>
       </footer>
     </main>
   )

@@ -5,6 +5,12 @@ export const heroMetrics = [
 ]
 
 export const aboutLanguages = ['HTML', 'Python', 'CSS', 'C++']
+export const aboutLanguageBadges = [
+  { label: 'HTML', signature: '<html>' },
+  { label: 'Python', signature: '>>> py' },
+  { label: 'CSS', signature: '{ style }' },
+  { label: 'C++', signature: 'C++' },
+]
 
 export const legacyHTMLExercises = ['Intro', 'Lists', 'Form', 'HTML HW', 'HTML2 HW']
 
@@ -12,10 +18,12 @@ export const quickLinks = [
   {
     label: 'GitHub',
     href: 'https://github.com/sahilchess',
+    icon: '</>',
   },
   {
     label: 'Email',
     href: 'mailto:sahilchess09@gmail.com?subject=Website%20Email',
+    icon: '✉',
   },
 ]
 

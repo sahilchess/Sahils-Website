@@ -10,7 +10,7 @@ export default function PageHeader({
     <header className={`hero-panel section-panel ${slim ? 'hero-panel-slim' : ''}`}>
       <div className="hero-copy">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h1 className={slim ? 'page-title' : ''}>{title}</h1>
+        <h1 className={`page-title ${slim ? 'page-title-slim' : ''}`}>{title}</h1>
         {description ? <p className="hero-text">{description}</p> : null}
         {actions.length > 0 ? (
           <div className="hero-actions">

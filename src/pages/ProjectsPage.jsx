@@ -49,6 +49,9 @@ export default function ProjectsPage() {
                   rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                 >
+                  <span className="quick-link-icon" aria-hidden="true">
+                    {link.icon}
+                  </span>
                   <span className="quick-link-label">{link.label}</span>
                 </a>
               ))}
