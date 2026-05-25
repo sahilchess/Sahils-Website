@@ -44,4 +44,5 @@ GitHub Actions deploys the site to GitHub Pages on pushes to `main` using `.gith
 - `src/` — React source code (pages, components, styles, content data)
 - `docs/` — generated production build assets
 - `python/` — legacy standalone Python projects
-- `index.html` and `app.html` — static entry files used for site hosting/layout
+- `index.html` — landing redirect page that routes visitors to the built app path
+- `app.html` — Vite app entry file used during development and build generation
