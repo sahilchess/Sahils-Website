@@ -1,15 +1,47 @@
 # Sahil's Website
 
-This repository now uses a React + Vite rebuild of the original site with separate pages for Home, About, Projects, Browser Demos, and Contact.
+Personal portfolio website built with **React + Vite**.
 
-## Run locally
+## Pages
 
-1. `npm install`
-2. `npm run dev`
+- Home
+- About
+- Projects
+- Browser Projects
+- Contact
 
-## Build
+Navigation is hash-based (for example: `#/home`, `#/projects`).
 
-- `npm run build`
-- `npm run preview`
+## Tech Stack
 
-The old static HTML and CSS pages were replaced by the React app in the root of the project. The source is now split across small page and component files under `src/`.
+- React 18
+- Vite 5
+
+## Local Development
+
+From the project root:
+
+1. Install dependencies:
+   - `npm install`
+2. Start the development server:
+   - `npm run dev`
+
+## Build and Preview
+
+- Build production files:
+  - `npm run build`
+- Preview the production build locally:
+  - `npm run preview`
+
+The build output is generated in `docs/`.
+
+## Deployment
+
+GitHub Actions deploys the site to GitHub Pages on pushes to `main` using `.github/workflows/deploy.yml`.
+
+## Project Structure
+
+- `src/` — React source code (pages, components, styles, content data)
+- `docs/` — generated production build assets
+- `python/` — legacy standalone Python projects
+- `index.html` and `app.html` — static entry files used for site hosting/layout
