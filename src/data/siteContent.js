@@ -1,3 +1,6 @@
+import React from 'react'
+import hackclubLogo from '../assets/hackclub.png'
+
 export const heroMetrics = [
   { label: 'Robotics', value: 'VEX IQ and FRC growth' },
   { label: 'Speaking', value: 'FBLA and Oratorical events' },
@@ -19,6 +22,11 @@ export const quickLinks = [
     label: 'GitHub',
     href: 'https://github.com/sahilchess',
     icon: '</>',
+  },
+  {
+    label: 'Hack Club Slack',
+    href: 'https://hackclub.enterprise.slack.com/team/U05D9BJD4UC',
+    icon: React.createElement('img', { src: hackclubLogo, alt: 'Hack Club', width: 28, height: 28 }),
   },
   {
     label: 'Email',
