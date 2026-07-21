@@ -1,26 +1,32 @@
+// Sidebar links only show the pages meant for primary navigation.
 const navItems = [
-  { label: 'Home', href: '#/home' },
-  { label: 'About', href: '#/about' },
-  { label: 'Projects', href: '#/projects' },
-  { label: 'Browser', href: '#/browser-projects' },
-  { label: 'Contact', href: '#/contact' },
+  { label: 'home', href: '#/home' },
+  { label: 'projects', href: '#/projects' },
+  { label: 'find me', href: '#/find-me' },
 ]
 
 export default function SiteNav({ currentPage }) {
   return (
-    <nav className="topnav section-panel" aria-label="Primary navigation">
-      {navItems.map((item) => {
-        const pageKey = item.href.replace('#/', '')
-        const isActive = currentPage === pageKey
+    <>
+      {/* Brand mark stays fixed in the top-left corner. */}
+      <a className="site-mark" href="#/home" aria-label="Home">
+        ♢
+      </a>
+      {/* Primary navigation uses the sudo-style labels. */}
+      <nav className="topnav" aria-label="Primary navigation">
+        {navItems.map((item) => {
+          // Highlight the link for the current hash route.
+          const pageKey = item.href.replace('#/', '')
+          const isActive = currentPage === pageKey
 
-        return (
-          <a className={isActive ? 'active' : ''} href={item.href} key={item.label}>
-            <span className="tag-angle">&lt;</span>
-            <span>{item.label}</span>
-            <span className="tag-angle">/&gt;</span>
-          </a>
-        )
-      })}
-    </nav>
+          return (
+            <a className={isActive ? 'active' : ''} href={item.href} key={item.label}>
+              <span className="nav-prefix">sudo</span>
+              <span className="nav-label">{item.label}</span>
+            </a>
+          )
+        })}
+      </nav>
+    </>
   )
 }

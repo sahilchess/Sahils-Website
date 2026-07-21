@@ -1,41 +1,18 @@
 import PageHeader from '../components/PageHeader'
-import { heroMetrics, homeCards } from '../data/siteContent'
 
 export default function HomePage() {
+  // Home page keeps the layout simple and centered.
   return (
-    <>
+    <div className="home-page-shell">
+      {/* Big centered intro with the primary calls to action. */}
       <PageHeader
         actions={[
-          { label: 'About Me', href: '#/about', variant: 'secondary' },
           { label: 'Projects', href: '#/projects' },
+          { label: 'Find me', href: '#/find-me', variant: 'secondary' },
         ]}
-        aside={heroMetrics.map((metric) => (
-          <article className="metric-card" key={metric.label}>
-            <span className="metric-label">{metric.label}</span>
-            <strong>{metric.value}</strong>
-          </article>
-        ))}
-        description="I am a technical student who enjoys designing, programming, presenting, and building ambitious projects that turn difficult ideas into real results."
-        eyebrow="Robotics. Public speaking. Problem solving."
+        description="I'm a student and developer interested in storytelling through human-centered technology."
         title="Sahil Dasari"
       />
-
-      <section className="section-block">
-        <div className="section-heading">
-          <p className="eyebrow">Choose a page</p>
-          <h2>Organized Cleanly and Effortlessly</h2>
-        </div>
-
-        <div className="panel-grid home-card-grid">
-          {homeCards.map((card) => (
-            <a className="panel home-card" href={card.href} key={card.title}>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-              <span className="home-card-link">Open page</span>
-            </a>
-          ))}
-        </div>
-      </section>
-    </>
+    </div>
   )
 }

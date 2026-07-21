@@ -4,11 +4,10 @@ export default function NotFoundPage() {
   return (
     <>
       <PageHeader
-        actions={[{ label: 'Back Home', href: '#/home', variant: 'secondary' }]}
         description="That page does not exist, but you can jump back to the main site from here."
-        eyebrow="Page not found"
+        eyebrow="lost"
         slim
-        title="Lost page"
+        title="lost page"
       />
 
       <section className="section-block">

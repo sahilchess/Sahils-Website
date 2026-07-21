@@ -1,5 +1,4 @@
 export default function PageHeader({
-  eyebrow,
   title,
   description,
   actions = [],
@@ -7,13 +6,16 @@ export default function PageHeader({
   slim = false,
 }) {
   return (
-    <header className={`hero-panel section-panel ${slim ? 'hero-panel-slim' : ''}`}>
+    // Reusable page hero used by the main routes.
+    <header className={`hero-panel ${slim ? 'hero-panel-slim' : ''}`}>
       <div className="hero-copy">
-        {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+        {/* Main page title. */}
         <h1 className={`page-title ${slim ? 'page-title-slim' : ''}`}>{title}</h1>
+        {/* Optional supporting description under the title. */}
         {description ? <p className="hero-text">{description}</p> : null}
+        {/* Optional action buttons below the hero text. */}
         {actions.length > 0 ? (
-          <div className="hero-actions">
+          <div className="hero-actions hero-actions-centered">
             {actions.map((action) => (
               <a
                 className={`button ${action.variant === 'secondary' ? 'button-secondary' : 'button-primary'}`}
@@ -27,6 +29,7 @@ export default function PageHeader({
         ) : null}
       </div>
 
+      {/* Optional right-side content for pages that need it. */}
       {aside ? <div className="hero-rail">{aside}</div> : null}
     </header>
   )

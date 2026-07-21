@@ -4,17 +4,19 @@ import { aboutLanguageBadges } from '../data/siteContent'
 export default function AboutPage() {
   return (
     <>
+      {/* About stays in the router even though it is hidden from the sidebar. */}
       <PageHeader
-        actions={[{ label: 'Back Home', href: '#/home', variant: 'secondary' }]}
-        description="This page explains the experiences, interests, and goals that shape how I approach robotics, speaking, and long-term technical growth."
-        eyebrow="About Me"
+        description="A short writing-style page for background, interests, and long-term goals."
+        eyebrow="about"
         slim
-        title="Big Ideas in a Big World"
+        title="about"
       />
 
       <section className="section-block">
+        {/* The about content is split into panels for easier reading. */}
         <div className="panel-grid about-grid">
           <article className="panel">
+            {/* Background summary. */}
             <h3>Background</h3>
             <p>
               I am a student from Georgia with a strong interest in robotics,
@@ -38,6 +40,7 @@ export default function AboutPage() {
           </article>
 
           <article className="panel">
+            {/* Interests and skill notes. */}
             <h3>Education and Interests</h3>
             <p>
               I am a high school student with a strong interest in engineering,
@@ -69,6 +72,7 @@ export default function AboutPage() {
           </article>
 
           <article className="panel">
+            {/* Longer-term direction and goals. */}
             <h3>Goals</h3>
             <p>
               I want to keep growing as a technical leader by competing in FRC,
@@ -84,6 +88,7 @@ export default function AboutPage() {
           </article>
 
           <article className="panel">
+            {/* Short personal philosophy section. */}
             <h3>Olympiad Mindset</h3>
             <p>
               I like olympiads because they reward deep thinking, precision, and
