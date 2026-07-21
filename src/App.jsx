@@ -16,6 +16,13 @@ const pageMap = {
   'find-me': FindMePage,
 }
 
+const pageTitles = {
+  home: 'Home | Sahil Dasari',
+  about: 'About | Sahil Dasari',
+  projects: 'Projects | Sahil Dasari',
+  'find-me': 'Find Me | Sahil Dasari',
+}
+
 function getPageFromHash() {
   const hash = window.location.hash.replace(/^#\/?/, '')
   return hash || 'home'
@@ -39,6 +46,10 @@ export default function App() {
 
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
+
+  useEffect(() => {
+    document.title = pageTitles[currentPage] ?? 'Home | Sahil Dasari'
+  }, [currentPage])
 
   const Page = pageMap[currentPage] ?? NotFoundPage
   const isHomePage = currentPage === 'home'
