@@ -21,7 +21,7 @@ export default function SiteNav({ currentPage }) {
 
           return (
             <a className={isActive ? 'active' : ''} href={item.href} key={item.label}>
-              <span className="nav-prefix">sudo</span>
+              <span className="nav-prefix">ssh</span>
               <span className="nav-label">{item.label}</span>
             </a>
           )

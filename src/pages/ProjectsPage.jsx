@@ -88,7 +88,7 @@ export default function ProjectsPage() {
     <>
       {/* Projects page hero keeps the section title compact. */}
       <PageHeader
-        description="A compact index of the work, experiments, and build-out around this site."
+        description="A collection of all of the things I do."
         eyebrow="projects"
         slim
         title="projects"

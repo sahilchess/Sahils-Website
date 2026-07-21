@@ -15,8 +15,7 @@ export default function FindMePage() {
         {/* The contact panel keeps the action buttons in one place. */}
         <article className="panel contact-panel">
           <p>
-            If you want to talk about robotics, speaking events, or project
-            ideas, GitHub and email are the fastest ways to reach me.
+            If you want to talk about anything,you can talk to me here:
           </p>
           {/* Direct contact buttons. */}
           <div className="hero-actions">

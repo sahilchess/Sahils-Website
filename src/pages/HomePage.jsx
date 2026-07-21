@@ -10,7 +10,7 @@ export default function HomePage() {
           { label: 'Projects', href: '#/projects' },
           { label: 'Find me', href: '#/find-me', variant: 'secondary' },
         ]}
-        description="I'm a student and developer interested in storytelling through human-centered technology."
+        description="I'm a student and maker that will take over the world with hardware."
         title="Sahil Dasari"
       />
     </div>
