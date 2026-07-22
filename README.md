@@ -10,7 +10,7 @@ Personal portfolio website built with **React + Vite**.
 - Browser Projects
 - Contact
 
-Navigation is hash-based (for example: `#/home`, `#/projects`).
+Navigation uses path-based routes (for example: `/home`, `/projects`).
 
 ## Tech Stack
 

@@ -74,6 +74,8 @@ button:disabled {
 
 /* Shared shell used by every route. */
 .app-shell {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   padding: 1.35rem 1.35rem 3.5rem;
 }
@@ -83,6 +85,7 @@ button:disabled {
 }
 
 .site-frame {
+  flex: 1;
   width: min(95vw, 1120px);
   margin: 0 auto;
   padding-top: 4.75rem;
@@ -94,26 +97,41 @@ button:disabled {
   align-content: center;
 }
 
+.hero-panel,
+.section-block,
+.site-footer {
+  animation: rise-in 0.65s ease both;
+}
+
+.site-frame > *:nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.site-frame > *:nth-child(3) {
+  animation-delay: 150ms;
+}
+
 /* Fixed brand mark and sidebar navigation. */
 .site-mark {
   position: fixed;
   top: 1.45rem;
-  left: 1.5rem;
+  right: 2rem;
   z-index: 20;
   color: var(--accent);
   font-family: 'Monoton', cursive;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   line-height: 1;
   letter-spacing: 0;
+  animation: nav-rise 0.6s ease both;
 }
 
 .topnav {
   position: fixed;
   top: 2rem;
-  right: 2.1rem;
+  left: 1.5rem;
   z-index: 20;
   display: grid;
-  justify-items: end;
+  justify-items: start;
   gap: 0.28rem;
   margin: 0;
 }
@@ -127,6 +145,9 @@ button:disabled {
   font-size: clamp(0.9rem, 1.2vw, 1.15rem);
   line-height: 1.1;
   opacity: 0.74;
+  transform: translateY(10px);
+  animation: nav-rise 0.6s ease both;
+  animation-delay: calc(var(--nav-index, 0) * 90ms);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -136,13 +157,38 @@ button:disabled {
 }
 
 .nav-label {
+  display: inline-block;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
   font-weight: 700;
+  transition: max-width 0.32s steps(8, end), opacity 0.14s ease;
 }
 
 .topnav a:hover,
 .topnav a.active {
   opacity: 1;
   transform: translateY(-1px);
+}
+
+.topnav a:hover .nav-label,
+.topnav a:focus-visible .nav-label,
+.topnav a.active .nav-label {
+  max-width: calc(var(--nav-chars, 8) * 1ch + 0.5ch);
+  opacity: 1;
+}
+
+@keyframes nav-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Reusable page hero styles. */
@@ -205,6 +251,8 @@ button:disabled {
   padding: 0.72rem 1.05rem;
   border-radius: 999px;
   font-weight: 700;
+  transition: transform 0.18s ease, filter 0.18s ease, background 0.18s ease, color 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .button-primary {
@@ -216,6 +264,24 @@ button:disabled {
   border: 1px solid rgba(244, 247, 255, 0.14);
   background: rgba(255, 255, 255, 0.03);
   color: var(--text);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+  color: #120d08;
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: linear-gradient(135deg, #f08f2a, #ffb14d);
+  filter: brightness(1.03);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  border-color: transparent;
+  background: linear-gradient(135deg, #f08f2a, #ffb14d);
 }
 
 /* Section spacing and titles. */
@@ -334,6 +400,15 @@ button:disabled {
 .project-cell {
   min-height: 12rem;
   padding: 1rem;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  transition-delay: calc(var(--card-index, 0) * 70ms);
+}
+
+.project-cell[data-revealed='true'] {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-cell-head {
@@ -456,31 +531,41 @@ button:disabled {
 
 /* Footer positioning for the home screen and normal pages. */
 .site-footer {
-  width: min(95vw, 1120px);
-  margin: 4rem auto 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(215, 116, 24, 0.28);
-  text-align: center;
-}
-
-.site-footer-home {
   position: fixed;
-  left: 50%;
+  left: 0;
   bottom: 1rem;
+  right: 0;
   z-index: 15;
-  width: min(95vw, 1120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   margin: 0;
   padding-top: 0.9rem;
-  transform: translateX(-50%);
+  border-top: 1px solid rgba(215, 116, 24, 0.28);
   background: transparent;
   pointer-events: none;
 }
 
 .site-footer-quote {
+  width: 100%;
   margin: 0.55rem 0 0;
   color: var(--accent);
   font-style: italic;
   font-size: 0.95rem;
+  text-align: center;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact-panel {
@@ -500,11 +585,7 @@ button:disabled {
 /* Mobile layout adjustments. */
 @media (max-width: 720px) {
   .app-shell {
-    padding: 1rem 0.8rem 3rem;
-  }
-
-  .app-shell-home {
-    padding-bottom: 1rem;
+    padding: 1rem 0.8rem 4rem;
   }
 
   .site-frame,

@@ -1,5 +1,5 @@
 import PageHeader from '../components/PageHeader'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 // The category tabs control which cards are shown below.
 const projectTabs = [
@@ -14,15 +14,14 @@ const projectTabs = [
 template card
 {
     title: 'title',
-// Project cards live  here so adding one only requires one new object.
     category: 'catagories up there',
     description: 'oneliner usually in readme go check it',
-    repoUrl: 'https://github.com/sahilchess/woah what tis',
+    repoUrl: 'https://github.com/sahilchess/woah-what-tis',
   },
 */
 const projectCards = [
   {
-    title: 'Nomad: my Custom-E-Scooter',
+    title: 'Nomad: my Custom E-Scooter',
     category: 'hardware',
     description: 'a custom dual motor electric scooter with a motor in each wheel and tuned regenerative braking for each motor.',
     repoUrl: 'https://github.com/sahilchess/nomad',
@@ -69,11 +68,13 @@ const projectCards = [
     description: 'A lightweight command-line tracker for logging USACO (and Codeforces) practice problems, then reviewing progress over time.',
     repoUrl: 'https://github.com/sahilchess/USACO-Preparation-Tracker',
   },
+  
 
 ]
 
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState('all')
+  const projectMatrixRef = useRef(null)
 
   // Filter the visible cards when the selected tab changes.
   const filteredProjects = useMemo(() => {
@@ -83,6 +84,46 @@ export default function ProjectsPage() {
 
     return projectCards.filter((project) => project.category === activeTab)
   }, [activeTab])
+
+  useEffect(() => {
+    const projectMatrix = projectMatrixRef.current
+
+    if (!projectMatrix) {
+      return undefined
+    }
+
+    const cards = Array.from(projectMatrix.querySelectorAll('.project-cell'))
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      cards.forEach((card) => {
+        card.dataset.revealed = 'true'
+      })
+
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.dataset.revealed = 'true'
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: 0.18,
+        rootMargin: '0px 0px -8% 0px',
+      },
+    )
+
+    cards.forEach((card) => {
+      card.dataset.revealed = 'false'
+      observer.observe(card)
+    })
+
+    return () => observer.disconnect()
+  }, [filteredProjects])
 
   return (
     <>
@@ -111,9 +152,9 @@ export default function ProjectsPage() {
         </div>
 
         {/* The project grid renders only the cards that match the selected tab. */}
-        <div className="project-matrix">
-          {filteredProjects.map((project) => (
-            <article className="project-cell" key={project.title}>
+        <div className="project-matrix" ref={projectMatrixRef}>
+          {filteredProjects.map((project, index) => (
+            <article className="project-cell" key={project.title} style={{ '--card-index': index }}>
               {/* Title plus GitHub link live together in the card header. */}
               <div className="project-cell-head">
                 <h3>{project.title}</h3>
