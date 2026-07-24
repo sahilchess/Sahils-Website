@@ -14,7 +14,7 @@ export default function HomePage() {
         ]}
         */
         description="I'm a student and maker that will take over the world with hardware."
-        title="sadhil dasari"
+        title="sahil dasari"
       />
     </div>
   )
